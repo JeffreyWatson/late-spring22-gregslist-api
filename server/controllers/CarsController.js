@@ -64,7 +64,7 @@ export class CarsController extends BaseController {
   async remove(req, res, next) {
     try {
       await carsService.remove(req.params.id, req.userInfo.id)
-      return res.send("Delorted")
+      return res.send("Deleted")
     } catch (error) {
       next(error)
     }
